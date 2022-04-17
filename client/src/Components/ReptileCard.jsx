@@ -75,6 +75,7 @@ function ReptileCard(props) {
     return (
     <div>
         <h1>{props.name}</h1>
+        {props.image_link && <img height={200} width={200} src={props.image_link} />}
         <button onClick={handleCreateWishlist}>Add to Wishlist</button>
         {journalEntry ? (
             <div>

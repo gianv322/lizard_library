@@ -1,7 +1,7 @@
 import React from 'react'
 
 function JournalCard(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <div>
         <p>{props.reptile_name}</p>

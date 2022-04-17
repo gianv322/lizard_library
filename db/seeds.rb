@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-reptile1 = Reptile.create(name: "Alligator Snapping Turtle", location: "Southeast", description: "Scales on shell make it look like an alligator.")
-reptile2 = Reptile.create(name: "American Alligator", location: "Southeast", description: "When their mouth is closed you cannot see their teeth.")
-reptile3 = Reptile.create(name: "American Crocodile", location: "Southeast", description: "When theire mouth is open you can see their teeth.")
+reptile1 = Reptile.create(name: "Alligator Snapping Turtle", location: "Southeast", description: "Scales on shell make it look like an alligator.", image_link: 'https://news.illinois.edu/files/6367/578177/122614.jpg')
+reptile2 = Reptile.create(name: "American Alligator", location: "Southeast", description: "When their mouth is closed you cannot see their teeth.", image_link: 'https://c.pxhere.com/images/21/64/b3df74c410bfd562efc49b5ac83b-1594128.jpg!d')
+reptile3 = Reptile.create(name: "American Crocodile", location: "Southeast", description: "When theire mouth is open you can see their teeth.", image_link: 'https://c.pxhere.com/photos/39/3d/biscayne_national_park_florida_american_crocodile_wildlife_river_water_shoreline_dangerous-1355926.jpg!d')
 reptile4 = Reptile.create(name: "Carolina Anole", location: "Southeast", description: "They can change colors.")
 reptile5 = Reptile.create(name: "Common Box Turtle", location: "Northeast", description: "Most common species of turtle in North America.")
 reptile6 = Reptile.create(name: "Chuckwalla", location: "Southwest", description: "The Chuckwalla is a species of iguana.")
