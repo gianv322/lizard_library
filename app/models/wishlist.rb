@@ -1,3 +1,3 @@
 class Wishlist < ApplicationRecord
-    has_many :Reptiles
+    belongs_to :reptile
 end

@@ -31,8 +31,32 @@ function ReptileCard(props) {
 
         })
     }
+    
+    const handleCreateWishlist = async () => {
+        fetch('/wishlists',{
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({reptile_id: props.reptileId})
+        })
+        .then(res => res.json())
+        .then((newWishlist) => {
+            props.setWishListArray((prevState) => [...prevState, newWishlist])
+        })
 
-    function handleSubmit(e){
+        // const response = await fetch('/whishlists', {
+        //     method: 'POST',
+        //     headers: {'Content-Type': 'application/json'},
+        //     body: JSON.stringify({reptile_id: props.reptileId})
+        // })
+
+        // const data = await response.json()
+
+        // console.log("POST WISHLIST RESPONSE",response)
+        // console.log("POST WISHLIST DATA", data)
+
+        
+    }
+    function handleCreateJournalEntry(e){
         e.preventDefault()
         handleFormToggle()
         const newJournal ={
@@ -51,6 +75,7 @@ function ReptileCard(props) {
     return (
     <div>
         <h1>{props.name}</h1>
+        <button onClick={handleCreateWishlist}>Add to Wishlist</button>
         {journalEntry ? (
             <div>
         <a>{props.location}</a>
@@ -60,7 +85,7 @@ function ReptileCard(props) {
         </div>
         ):(
             <div>
-            <form onSubmit = {handleSubmit}>
+            <form onSubmit = {handleCreateJournalEntry}>
                 <p>Title:</p>
                 <input type="text" placeholder="Title" value = {title} onChange = {handleChangeTitle}></input>
                 <p>Message:</p>
