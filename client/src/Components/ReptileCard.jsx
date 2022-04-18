@@ -76,16 +76,18 @@ function ReptileCard(props) {
     }
 
     return (
-    <div>
+    <div className="reptilecard">
         <h1>{props.name}</h1>
         {props.image_link && <img height={200} width={200} src={props.image_link} />}
-        <button onClick={handleCreateWishlist}>Add to Wishlist</button>
+        <br></br>
+        <button className="button" onClick={handleCreateWishlist}>Add to Wishlist</button>
         {journalEntry ? (
             <div>
         <a>{props.location}</a>
         <br></br>
         <a>{props.description}</a>
-        <button onClick = {handleFormToggle}>Journal Entry</button>
+        <br></br>
+        <button className="button" onClick = {handleFormToggle}>Journal Entry</button>
         </div>
         ):(
             <div>
