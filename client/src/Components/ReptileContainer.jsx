@@ -2,7 +2,7 @@ import React from 'react'
 import ReptileCard from './ReptileCard'
 import Header from './Header'
 
-function ReptileContainer({reptileArray, setWishListArray, setSearchTerm, searchTerm, setLocationFilter}) {
+function ReptileContainer({reptileArray, setWishListArray, setSearchTerm, searchTerm, setLocationFilter, setJournalArray}) {
   console.log("REPTILE ARRAY FROM REPTILE CONTAINER", reptileArray)
 
   const reptileComponents = reptileArray.map((reptile) => {
@@ -15,6 +15,7 @@ function ReptileContainer({reptileArray, setWishListArray, setSearchTerm, search
         description = {reptile.description} 
         reptileId={reptile.id}
         image_link={reptile.image_link}
+        setJournalArray={setJournalArray}
       />
     )
   })

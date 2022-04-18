@@ -5,6 +5,7 @@ function JournalCard(props) {
   return (
     <div>
         <p>{props.reptile_name}</p>
+        {props.reptile_image && <img height={200} width={200} src={props.reptile_image} />}
         <p>{props.title}</p>
         <p>{props.message}</p>
         <p>{props.date}</p>

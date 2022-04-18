@@ -59,6 +59,7 @@ function App() {
             setLocationFilter={setLocationFilter} 
             reptileArray={filteredReptiles} 
             setWishListArray={setWishListArray}
+            setJournalArray={setJournalArray}
           />
       )
     }

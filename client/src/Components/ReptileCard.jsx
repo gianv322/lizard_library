@@ -28,7 +28,10 @@ function ReptileCard(props) {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newJournal)
-
+        })
+        .then(res => res.json())
+        .then((newJournal) => {
+            props.setJournalArray((prevState) => [...prevState, newJournal])
         })
     }
     
