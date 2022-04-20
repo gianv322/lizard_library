@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 
-function WishlistCard({reptileName, id, setWishListArray}) {
+function WishlistCard({reptileName, id, setWishListArray, reptile_image}) {
     function deleteFromWishlist(){
         fetch(`/wishlists/${id}`, {
             method: 'DELETE',
@@ -19,8 +19,11 @@ function WishlistCard({reptileName, id, setWishListArray}) {
   
     return (
     <div>
-        {reptileName}
-        <button onClick={deleteFromWishlist}>Saw it!</button>
+        <a className="name">{reptileName}</a>
+        <br></br>
+        <img height={200} width={200} src={reptile_image}/>
+        <br></br>
+        <button className="regionbtn" onClick={deleteFromWishlist}>Saw it!</button>
     </div>
   )
 }

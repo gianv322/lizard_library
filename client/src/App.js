@@ -72,7 +72,6 @@ function App() {
     }
   }
   
-  // console.log(process.env)
   return (
       <div className="App">
           <Navbar setCurrentPage={setCurrentPage}/>

@@ -7,6 +7,7 @@ function JournalContainer({journalArray}) {
     return (
     <div>
         <ul>
+          <h1 className="header">Journals</h1>
             {journalComponents}
         </ul>
     </div>

@@ -77,28 +77,42 @@ function ReptileCard(props) {
 
     return (
     <div className="reptilecard">
-        <h1>{props.name}</h1>
-        {props.image_link && <img height={200} width={200} src={props.image_link} />}
+        <h1 className="name">{props.name}</h1>
         <br></br>
-        <button className="button" onClick={handleCreateWishlist}>Add to Wishlist</button>
+        {props.image_link && <img className="img" height={200} width={200} src={props.image_link} />}
+        <br></br>
+        <br></br>
+        <button className="regionbtn" onClick={handleCreateWishlist}>Add to Wishlist</button>
+        <br></br>
+        <br></br>
         {journalEntry ? (
             <div>
-        <a>{props.location}</a>
+        <a>Region: {props.location}</a>
         <br></br>
-        <a>{props.description}</a>
+        <a>Habitat: {props.description}</a>
         <br></br>
-        <button className="button" onClick = {handleFormToggle}>Journal Entry</button>
+        <br></br>
+        <button className="regionbtn" onClick = {handleFormToggle}>Journal Entry</button>
         </div>
         ):(
             <div>
-            <form onSubmit = {handleCreateJournalEntry}>
-                <p>Title:</p>
+            <form color="black"onSubmit = {handleCreateJournalEntry}>
+                <a>Title:</a>
+                <br></br>
                 <input type="text" placeholder="Title" value = {title} onChange = {handleChangeTitle}></input>
-                <p>Message:</p>
+                <br></br>
+                <a>Message:</a>
+                <br></br>
                 <input type="text" placeholder="Message" value = {message} onChange = {handleChangeMessage}></input>
-                <p>Date:</p>
+                <br></br>
+                <a>Date:</a>
+                <br></br>
                 <input type="text" placeholder="Date" value = {date} onChange = {handleChangeDate}></input>
-                <input type='submit' value='Submit Journal Entry' />
+                <br></br>
+                <br></br>
+                <button type="submit" className="regionbtn">Submit Journal Entry</button>
+                
+                {/* <input type='submit' value='Submit Journal Entry' /> */}
             </form>
             </div>
         )}

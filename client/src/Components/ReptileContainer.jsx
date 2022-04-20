@@ -21,9 +21,9 @@ function ReptileContainer({reptileArray, setWishListArray, setSearchTerm, search
   })
   
     return (
-    <div>
+    <div className="reptilecontainer">
       <Header setSearchTerm={setSearchTerm} searchTerm={searchTerm} setLocationFilter={setLocationFilter}/>
-      <ul>
+      <ul className="reptilecontainer">
           {reptileComponents}
       </ul>
     </div>
